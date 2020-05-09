@@ -10,7 +10,7 @@ function showUrl(){
 	let jobId = s.replace(/([A-Z]+)/,"$1");
 	window.alert(jobId);
 	//if(jobId==undefined || jobId==null)return;
-	//trigger(jobId.substring(1));
+	trigger(jobId);
 }
 function trigger(jobId){
 document.getElementById("link").href="https://4wkutquvec.execute-api.ap-southeast-2.amazonaws.com/Prod/kidreward/earnings/" + jobId + "?" + Math.random();
