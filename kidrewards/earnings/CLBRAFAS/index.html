@@ -7,8 +7,8 @@ function showUrl(){
 	//window.alert(window.location.hash);
 	//window.alert(window.location.search);
 	let s=window.location;
-	let n = s.lastIndexOf("/");
-	let jobId=s.substring(n);
+	let n = s.replace("https://kidrewards.thepinesoft.com/kidrewards/earnings/","");
+	let jobId=s;
 	window.alert(jobId);
 	//if(jobId==undefined || jobId==null)return;
 	//trigger(jobId.substring(1));
