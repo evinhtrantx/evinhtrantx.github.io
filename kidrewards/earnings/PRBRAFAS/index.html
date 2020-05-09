@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Access-Control-Allow-Origin" content="4wkutquvec.execute-api.ap-southeast-2.amazonaws.com"/>
+<title>API</title>
+<script type="text/javascript">
+function showUrl(){
+	//window.alert(window.location.hash);
+	//window.alert(window.location.search);
+	let s=window.location.href;
+	let re = s.match(/\/([A-Z]+)(\/|$)/);
+	let jobId = re[1];
+	console.log(re);
+	//window.alert(jobId);
+	//if(jobId==undefined || jobId==null)return;
+	trigger(jobId);
+}
+function trigger(jobId){
+document.getElementById("link").href="https://4wkutquvec.execute-api.ap-southeast-2.amazonaws.com/Prod/kidreward/earnings/" + jobId + "?" + Math.random();
+document.getElementById("link").style.display='';
+/*
+let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("response").innerText = this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://4wkutquvec.execute-api.ap-southeast-2.amazonaws.com/Prod/kidreward/earnings/" + jobId, true);
+  xhttp.send();
+ */
+}
+</script>
+</head>
+<body onload="showUrl()">
+<!--<button type="button" onclick="showUrl()">show Url</button>-->
+<a href="" id="link" style="display:none" target="response"><button>Touch to confirm</button></a>
+<p>
+<iframe id="response" name="response" width="100%" height="30px" style="overflow:hidden"></iframe>
+</body>
+</html>
