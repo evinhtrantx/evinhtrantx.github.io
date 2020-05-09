@@ -7,7 +7,7 @@ function showUrl(){
 	//window.alert(window.location.hash);
 	//window.alert(window.location.search);
 	let s=window.location.href;
-	let jobId = s.replace(/([A-Z])+/,"$1");
+	let jobId = s.replace(/([A-Z]+)/,"$1");
 	window.alert(jobId);
 	//if(jobId==undefined || jobId==null)return;
 	//trigger(jobId.substring(1));
