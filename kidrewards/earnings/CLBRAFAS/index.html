@@ -7,7 +7,7 @@ function showUrl(){
 	//window.alert(window.location.hash);
 	//window.alert(window.location.search);
 	let s=window.location.href;
-	let re = s.match(/\/([A-Z]+)(:\/|$)/);
+	let re = s.match(/\/([A-Z]+)(\/|$)/);
 	let jobId = re[1];
 	console.log(re);
 	//window.alert(jobId);
