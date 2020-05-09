@@ -13,6 +13,7 @@ function showUrl(){
 	//window.alert(jobId);
 	//if(jobId==undefined || jobId==null)return;
 	trigger(jobId);
+	windows.setTimeout(function(){document.getElementById("link").style.display='none';},3000);
 }
 function trigger(jobId){
 document.getElementById("link").href="https://4wkutquvec.execute-api.ap-southeast-2.amazonaws.com/Prod/kidreward/earnings/" + jobId + "?" + Math.random();
