@@ -6,9 +6,12 @@
 function showUrl(){
 	//window.alert(window.location.hash);
 	//window.alert(window.location.search);
-	let jobId=window.location.hash;
-	if(jobId==undefined || jobId==null)return;
-	trigger(jobId.substring(1));
+	let s=window.location;
+	let n = s.lastIndexOf("/");
+	let jobId=s.substring(n);
+	window.alert(jobId);
+	//if(jobId==undefined || jobId==null)return;
+	//trigger(jobId.substring(1));
 }
 function trigger(jobId){
 document.getElementById("link").href="https://4wkutquvec.execute-api.ap-southeast-2.amazonaws.com/Prod/kidreward/earnings/" + jobId + "?" + Math.random();
